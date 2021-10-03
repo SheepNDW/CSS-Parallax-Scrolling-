@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+}
+.list-item:hover .item-img::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.item-img {
+  // border: 1px solid #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+}
+.pic1 {
+  background-image: url(../img/南極.jpeg);
+}
+.pic2 {
+  background-image: url(../img/實力至上.png);
+}
+.pic3 {
+  background-image: url(../img/暮蟬.png);
+}
+.pic4 {
+  background-image: url(../img/輝夜.png);
+}
+.pic5 {
+  background-image: url(../img/馬娘.jpg);
+}
+.pic6 {
+  background-position: 50% -300%;
+  background-image: url(../img/魔女之旅.jpg);
+}
+
+.item-txt {
+  color: #fff;
+  font-family: Helvetica;
+  text-align: center;
+  text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
